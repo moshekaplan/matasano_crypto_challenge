@@ -27,7 +27,6 @@ Now detect the block cipher mode the function is using each time.
 """
 
 # built-in
-import base64
 import random
 
 # PyCrypto
