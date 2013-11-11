@@ -241,6 +241,14 @@ mode have this property?
 #   AAAAA:admin<true
 # We will therefore flip the last bit of bytes 6 and 12 in block 2.
 
+# This attack works because the method used to chain the blocks together is to 
+# XOR the ciphertext with the following plaintext, before encrypting it.
+# As such, when it decrypts the ciphertext, it has to undo that operation,
+# and therefore requires the n-th ciphertext to be XORED with the output of the
+# decrypter function. So we effectively have the ability to intelligently modify
+# half of the ciphertext blocks, as each alteration causes the nth block to become trash
+# and the nth+1 block to be controlled 
+
 def flip_lsb(byte):
     return chr(ord(byte) ^ 1)
 
