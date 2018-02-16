@@ -295,5 +295,6 @@ def decrypt_and_validate_padding(ciphertext, IV, key):
     except:
         return False
 
-
+ciphertext, IV = encrypt_random_string()
+print decrypt_and_validate_padding(ciphertext, IV, AES_KEY)
 
