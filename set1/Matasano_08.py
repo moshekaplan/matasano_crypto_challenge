@@ -13,9 +13,6 @@ Remember that the problem with ECB is that it is stateless and
 deterministic; the same 16 byte plaintext block will always produce
 the same 16 byte ciphertext."""
 
-# built-in modules
-import base64
-
 ciphertexts = open('gistfile8.txt').read().split()
 
 # Strategy: See if any ciphertext repeats the same 16-byte sequence

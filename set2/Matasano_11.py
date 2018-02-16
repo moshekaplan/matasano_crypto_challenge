@@ -184,7 +184,7 @@ def detect_mode(ciphertext):
     else:
         return 'cbc'
 
-yankee = open('connecticut_yankee.txt','r').read()
+yankee = open('Matasano_11_connecticut_yankee.txt','r').read()
 
 for i in range(1000):
     if i %50 == 0:

@@ -225,7 +225,7 @@ def score_english_words(msg, wordlist):
 #looking histogram is the repeating-key XOR key byte for that
 #block. Put them together and you have the key.
 
-wordlist = read_wordlist("english_words.txt", "connecticut_yankee.txt")
+wordlist = read_wordlist("Matasano_06_english_words.txt", "Matasano_06_connecticut_yankee.txt")
 
 ciphertext = base64.b64decode(open('gistfile6.txt').read())
 
